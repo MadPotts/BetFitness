@@ -1,12 +1,22 @@
 import React from 'react'
-import { View, Text } from 'react-native'
+import { View, Text, Button, Pressable, StyleSheet, TouchableOpacity } from 'react-native'
 import { createStackNavigator } from '@react-navigation/stack'
 
 const Stack = createStackNavigator()
 
 const Home = () => (
   <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-    <Text>Home screen!</Text>
+    <TouchableOpacity style={styles.appButtonContainer}>
+      <Text style={styles.appButtonText}>New Group</Text>
+    </TouchableOpacity>
+    <TouchableOpacity style={styles.appButtonContainer}>
+      <Text style={styles.appButtonText}>Join Group</Text>
+    </TouchableOpacity>
+    <TouchableOpacity style={styles.appButtonContainer}>
+      <Text style={styles.appButtonText}>Add Friends</Text>
+    </TouchableOpacity>
+    {/* <Text>Home screen!</Text>
+    <Button title="Create new group"/> */}
   </View>
 )
 
@@ -19,5 +29,23 @@ const HomeStackNavigator = () => {
     </Stack.Navigator>
   )
 }
+
+const styles = StyleSheet.create({
+    appButtonContainer: {
+      elevation: 8,
+      backgroundColor: "#B71B1B",
+      borderRadius: 10,
+      paddingVertical: 10,
+      paddingHorizontal: 15,
+      marginTop: 40,
+      //justifyContent: "center"
+    },
+    appButtonText: {
+      fontSize: 24,
+      color: "#fff",
+      alignSelf: "center",
+
+    }
+})
 
 export default HomeStackNavigator
