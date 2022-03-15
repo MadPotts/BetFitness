@@ -2,9 +2,11 @@ import * as React from 'react'
 import { View, StyleSheet, Image, Text, TouchableOpacity } from 'react-native'
 import { createDrawerNavigator, DrawerContentScrollView, DrawerItem } from '@react-navigation/drawer'
 import Icon from 'react-native-vector-icons/FontAwesome'
+import { FontAwesome } from '@expo/vector-icons'
 
 import SettingsStackNavigator from './stack-navigators/SettingsStackNavigator'
 import ReportStackNavigator from './stack-navigators/ReportStackNavigator'
+import InboxStackNavigator from './stack-navigators/InboxStackNavigator'
 import BottomTabNavigator from './BottomTabNavigator'
 
 const Drawer = createDrawerNavigator()
@@ -54,7 +56,13 @@ const DrawerNavigator = () => {
         headerTitle: () => <Image source={require('../assets/logo-simple.png')} />,
         headerRight: () => (
           <View style={styles.headerRight}>
-            <Icon name="inbox" size={20} color="#1B1C20" />
+            {/* <Icon name="inbox" size={20} color="#1B1C20" /> */}
+            {/* <Drawer.Screen name="InboxStack" component={InboxStackNavigator}/> */}
+            <FontAwesome.Button 
+              name="inbox" 
+              backgroundColor="white" 
+              color = "black" 
+              onPress = {InboxStackNavigator} />
           </View>
         ),
       }}/>

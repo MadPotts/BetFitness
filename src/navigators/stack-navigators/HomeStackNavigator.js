@@ -5,7 +5,7 @@ import { createStackNavigator } from '@react-navigation/stack'
 const Stack = createStackNavigator()
 
 const Home = () => (
-  <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+  <View style={{ flex: 1, justifyContent: 'top', alignItems: 'center' }}>
     <TouchableOpacity style={styles.appButtonContainer}>
       <Text style={styles.appButtonText}>New Group</Text>
     </TouchableOpacity>
@@ -36,7 +36,7 @@ const styles = StyleSheet.create({
       backgroundColor: "#B71B1B",
       borderRadius: 10,
       paddingVertical: 10,
-      paddingHorizontal: 15,
+      paddingHorizontal: 50,
       marginTop: 40,
       //justifyContent: "center"
     },
